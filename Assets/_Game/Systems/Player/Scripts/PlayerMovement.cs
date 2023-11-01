@@ -9,7 +9,7 @@ public class PlayerMovement : MonoBehaviour {
     
     public bool isMoving => !ReachedDestination();
     public void SetDestination(Vector3 position) {
-        if(NavMesh.SamplePosition(position, out var navHit, 0.1f, NavMesh.AllAreas))
+        if(NavMesh.SamplePosition(position, out var navHit, 1f, NavMesh.AllAreas))
         {
             agent.SetDestination(navHit.position);
         }
