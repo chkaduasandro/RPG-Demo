@@ -6,12 +6,13 @@ using UnityEngine.AI;
 public class PlayerController : MonoBehaviour {
     public CameraController CameraController;
     public PlayerMovement playerMovement;
+    public PlayerAnimation playerAnimation;
 
 
     [SerializeField] private LayerMask groundLayer;
-    
     void Update() {
         Process_Movement();
+        Process_Animation();
     }
 
     private void Process_Movement() {
@@ -30,5 +31,10 @@ public class PlayerController : MonoBehaviour {
                 }
             }
         }
+    }
+
+    private void Process_Animation() {
+        if(playerMovement.isMoving) playerAnimation.SetRunningAnimation();
+        else playerAnimation.SetIdleAnimation();
     }
 }
