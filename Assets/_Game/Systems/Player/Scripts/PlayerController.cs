@@ -5,16 +5,19 @@ using UnityEngine.AI;
 
 public class PlayerController : MonoBehaviour {
     public CameraController CameraController;
-    public PlayerMovement PlayerMovement;
+    public PlayerMovement playerMovement;
 
 
     [SerializeField] private LayerMask groundLayer;
     [SerializeField] private NavMeshAgent navAgent;
     
     
-    void Update()
-    {
-        if (Input.GetMouseButtonDown(0)) // Left mouse click
+    void Update() {
+        Process_Movement();
+    }
+
+    private void Process_Movement() {
+        if (Input.GetMouseButtonDown(0))
         {
             Ray        ray = CameraController.mainCamera.ScreenPointToRay(Input.mousePosition);
             RaycastHit hit;
@@ -25,10 +28,7 @@ public class PlayerController : MonoBehaviour {
                 if (hit.collider != null)
                 {
                     Vector3 clickPoint = hit.point;
-                    if(NavMesh.SamplePosition(clickPoint, out var navHit, 0.1f, NavMesh.AllAreas))
-                    {
-                        navAgent.SetDestination(navHit.position);
-                    }
+                    playerMovement.SetDestination(clickPoint);
                 }
             }
         }
