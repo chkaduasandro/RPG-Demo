@@ -159,4 +159,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef9916accc7a95d4996d7632190eec93, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  navMeshObstacle: {fileID: 0}
+  navMeshObstacle: {fileID: 133857988660037972}

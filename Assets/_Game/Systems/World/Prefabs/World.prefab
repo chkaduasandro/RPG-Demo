@@ -712,6 +712,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7631812333869638842}
     m_Modifications:
+    - target: {fileID: 3374101454740786572, guid: 3a0f47d52237f18448604896d01f16dd,
+        type: 3}
+      propertyPath: navMeshObstacle
+      value: 
+      objectReference: {fileID: 5107394949517404932}
     - target: {fileID: 3374101454740786574, guid: 3a0f47d52237f18448604896d01f16dd,
         type: 3}
       propertyPath: m_Name
@@ -774,6 +779,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3a0f47d52237f18448604896d01f16dd, type: 3}
+--- !u!208 &5107394949517404932 stripped
+NavMeshObstacle:
+  m_CorrespondingSourceObject: {fileID: 133857988660037972, guid: 3a0f47d52237f18448604896d01f16dd,
+    type: 3}
+  m_PrefabInstance: {fileID: 5132576924076728912}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &7631812332515094495 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3374101454740786575, guid: 3a0f47d52237f18448604896d01f16dd,

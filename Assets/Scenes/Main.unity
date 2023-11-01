@@ -113,8 +113,8 @@ NavMeshSettings:
     ledgeDropHeight: 0
     maxJumpAcrossDistance: 0
     minRegionArea: 2
-    manualCellSize: 0
-    cellSize: 0.06666667
+    manualCellSize: 1
+    cellSize: 0.1
     manualTileSize: 0
     tileSize: 256
     accuratePlacement: 0
@@ -254,7 +254,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4e9cac1d35a2d443a5f0997ce1daf8c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mainCamera: {fileID: 0}
+  mainCamera: {fileID: 330585545}
   target: {fileID: 1393975170}
   offset: {x: 0, y: 15, z: -4}
 --- !u!1 &410087039
@@ -611,6 +611,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 725222966}
+--- !u!208 &1798680652 stripped
+NavMeshObstacle:
+  m_CorrespondingSourceObject: {fileID: 5107394949517404932, guid: c96cd24e1679afb4e8fc000c0ddd980d,
+    type: 3}
+  m_PrefabInstance: {fileID: 7631812332152784254}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &7631812332152784254
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -618,6 +624,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 7631812332515094492, guid: c96cd24e1679afb4e8fc000c0ddd980d,
+        type: 3}
+      propertyPath: navMeshObstacle
+      value: 
+      objectReference: {fileID: 1798680652}
     - target: {fileID: 7631812333869638842, guid: c96cd24e1679afb4e8fc000c0ddd980d,
         type: 3}
       propertyPath: m_RootOrder
