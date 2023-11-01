@@ -34,7 +34,10 @@ public class PlayerController : MonoBehaviour {
     }
 
     private void Process_Animation() {
-        if(playerMovement.isMoving) playerAnimation.SetRunningAnimation();
+        if (playerMovement.isMoving) {
+            playerAnimation.SetMovingAnimation();
+            // playerAnimation.SetMovingAnimationSpeed(playerMovement.agentSpeedMultiplier);
+        }
         else playerAnimation.SetIdleAnimation();
     }
 }
