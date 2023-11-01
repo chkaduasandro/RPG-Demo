@@ -9,8 +9,6 @@ public class PlayerController : MonoBehaviour {
 
 
     [SerializeField] private LayerMask groundLayer;
-    [SerializeField] private NavMeshAgent navAgent;
-    
     
     void Update() {
         Process_Movement();
