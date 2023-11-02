@@ -5,8 +5,8 @@ using UnityEngine.AI;
 
 public class PlayerController : MonoBehaviour {
     public CameraController CameraController;
-    public PlayerMovement playerMovement;
-    public PlayerAnimation playerAnimation;
+    public PlayerMovement PlayerMovement;
+    public PlayerAnimation PlayerAnimation;
     void Update() {
         Process_Input();
         Process_Animation();
@@ -24,7 +24,7 @@ public class PlayerController : MonoBehaviour {
 
                 if (hit.collider.CompareTag(Constants.Tags.Ground)) {
                     Vector3 clickPoint = hit.point;
-                    playerMovement.SetDestination(clickPoint);
+                    PlayerMovement.SetDestination(clickPoint);
                 }
                 else if (hit.collider.CompareTag(Constants.Tags.Interactable)) {
                     var interactable = hit.collider.GetComponent<IInteractable>();
@@ -35,10 +35,10 @@ public class PlayerController : MonoBehaviour {
     }
     
     private void Process_Animation() {
-        if (playerMovement.isMoving) {
-            playerAnimation.SetMovingAnimation();
+        if (PlayerMovement.isMoving) {
+            PlayerAnimation.SetMovingAnimation();
             // playerAnimation.SetMovingAnimationSpeed(playerMovement.agentSpeedMultiplier);
         }
-        else playerAnimation.SetIdleAnimation();
+        else PlayerAnimation.SetIdleAnimation();
     }
 }
